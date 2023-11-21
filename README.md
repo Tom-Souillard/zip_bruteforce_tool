@@ -75,3 +75,82 @@ This project is licensed under the Apache License 2.0. See the [LICENSE](LICENSE
 Contributions are welcome! Please read the [CONTRIBUTING](CONTRIBUTING.md) guidelines before submitting a pull request.
 
 ---
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+### Française
+
+# Outil de Bruteforce ZIP
+
+Bienvenue dans le projet `zip_bruteforce_tool`. Cet outil Python de qualité professionnelle est conçu pour effectuer des attaques par brute force sur des archives ZIP protégées par mot de passe en utilisant des outils puissants comme John the Ripper et fcrackzip.
+
+## Fonctionnalités
+- Effectuer des attaques par brute force sur des fichiers ZIP
+- Utiliser John the Ripper et fcrackzip pour un craquage de mot de passe efficace
+- Scripts et utilitaires complets pour générer des archives de test et exécuter des attaques
+- Facile à étendre et à personnaliser
+
+## Installation
+
+1. Cloner le dépôt :
+    ```bash
+    git clone https://github.com/Tom-Souillard/zip_bruteforce_tool.git
+    cd zip_bruteforce_tool
+    ```
+
+2. Installer les dépendances requises :
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+3. Installer fcrackzip et John the Ripper :
+    ```bash
+    sudo apt-get install fcrackzip john
+    ```
+
+## Utilisation
+
+### Générer des Archives de Test
+
+Générer une archive ZIP de test avec un mot de passe connu :
+```bash
+python scripts/generate_test_archives.py
+```
+
+### Exécuter une Attaque par Brute Force avec fcrackzip
+
+```bash
+python scripts/run_fcrackzip.py path/to/your/test.zip
+```
+
+### Exécuter une Attaque par Brute Force avec John the Ripper
+
+Tout d'abord, extraire le hash du fichier ZIP :
+```bash
+python scripts/extract_zip_hash.py path/to/your/test.zip
+```
+
+Ensuite, exécuter John the Ripper :
+```bash
+python scripts/run_john.py zip_hash.txt
+```
+
+## Tests
+
+Exécuter les tests unitaires pour s'assurer que l'outil fonctionne correctement :
+```bash
+pytest
+```
+
+## Documentation
+
+Pour des instructions détaillées sur l'utilisation et la personnalisation, veuillez consulter la [documentation](docs/README.md).
+
+## Licence
+
+Ce projet est sous licence Apache License 2.0. Voir le fichier [LICENSE](LICENSE) pour plus de détails.
+
+## Contribuer
+
+Les contributions sont les bienvenues ! Veuillez lire les lignes directrices de [CONTRIBUTING](CONTRIBUTING.md) avant de soumettre une demande de tirage.
